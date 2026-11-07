@@ -64,7 +64,7 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     padding: 15px 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    border-bottom: 1px solid #ffffff1a;
     transition: background-color 0.2s;
 }
 
@@ -109,7 +109,7 @@ figure img {
     width: 100%;
     height: auto;
     display: block;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px #00000026;
     border-radius: 8px;
 }
 
