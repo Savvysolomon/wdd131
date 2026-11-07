@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #0d3b66;    
+    --secondary-color: #fff;   
+    --accent-color: #0077b6;      
+    --text-color: #2b2d42;       
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+span.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+#menu-btn {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 25px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: transparent !important;
+    color: #ffd000 !important;
+}
+
+nav a.active {
+    color: #ffd000 !important;
+    border-bottom: 3px solid #ffd000;
+    background-color: transparent !important;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.view-title {
+    text-align: center;
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+figure {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+figcaption {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+#lastModified {
+    font-family: var(--body-font);
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+}
