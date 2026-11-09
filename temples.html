@@ -1,76 +1,141 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="The official Temple Album project for WDD131, developed by student Solomon Umoh at BYU.">
     <meta name="author" content="Solomon Umoh">
+
     <title>Temple Album | WDD131 | Solomon Umoh</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/temples.css" media="(max-width: 767px)">
-    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JavaScript -->
     <script src="scripts/temples.js" defer></script>
 </head>
+
 <body>
+
     <header>
         <div class="header-container">
             <span class="title">Temple Album</span>
-            <button id="menu-btn" aria-label="Menu Button" aria-expanded="false" aria-controls="nav-menu">☰</button>
+
+            <button
+                id="menu-btn"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="nav-menu">
+                ☰
+            </button>
         </div>
-        <nav id="nav-menu">
-            <a href="#" class="active">Home</a>
+
+        <nav id="nav-menu" aria-label="Main navigation">
+            <a href="#" class="active" aria-current="page">Home</a>
             <a href="#">Old</a>
             <a href="#">New</a>
             <a href="#">Large</a>
             <a href="#">Small</a>
         </nav>
     </header>
+
     <main>
         <h1 class="view-title">Home</h1>
-        <div class="gallery-grid">
+
+        <div class="gallery-grid" id="gallery">
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
             <figure>
-                <img src="images/columbus_ohio_temple.jpeg" alt="Columbus Ohio Temple" title="Columbus Ohio Temple" loading="lazy">
+                <img
+                    src="images/columbus_ohio_temple.jpeg"
+                    alt="Columbus Ohio Temple"
+                    loading="lazy">
                 <figcaption>Columbus Ohio Temple</figcaption>
             </figure>
+
         </div>
     </main>
+
     <footer>
-        <p>&copy;<span id="currentyear"></span> | Solomon Umoh | Nigeria</p>
+        <p>
+            &copy; <span id="currentyear"></span> |
+            Solomon Umoh | Nigeria
+        </p>
+
         <p id="lastModified"></p>
     </footer>
+
 </body>
 </html>

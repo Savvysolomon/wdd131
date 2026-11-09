@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #0d3b66;    
-    --secondary-color: #f4f4f9;   
-    --accent-color: #0077b6;      
-    --text-color: #2b2d42;       
+    --primary-color: #800080;
+    --secondary-color: #ffffff;
+    --accent-color: #ffd000;
+    --text-color: #333333;
     --heading-font: "Roboto", sans-serif;
     --body-font: "Roboto", sans-serif;
 }
@@ -16,7 +16,7 @@
 body {
     font-family: var(--body-font);
     color: var(--text-color);
-    background-color: var(--secondary-color);
+    background-color: #ffffff;
     line-height: 1.5;
 }
 
@@ -41,38 +41,34 @@ span.title {
     display: block;
     background: none;
     border: none;
-    color: var(--secondary-color);
+    color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
     padding: 5px;
 }
 
+/* Mobile navigation */
 nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    background-color: var(--primary-color);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
 }
 
 nav.open {
-    max-height: 350px; 
+    display: flex;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     padding: 15px 25px;
-    border-bottom: 1px solid #ffffff1a;
+    border-bottom: 1px solid #000;
     transition: background-color 0.2s;
 }
 
-
-
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     background-color: var(--accent-color);
-    color: #ffffff;
+    color: #000000;
 }
 
 main {
@@ -118,12 +114,12 @@ figcaption {
     text-align: center;
     font-size: 0.95rem;
     font-weight: normal;
-    color: var(--text-color);
+    color: #333333;
 }
 
 footer {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
@@ -136,6 +132,13 @@ footer p {
 
 #lastModified {
     font-family: var(--body-font);
-    color: var(--secondary-color);
+    color: #ffffff;
     font-size: 0.85rem;
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
 }
