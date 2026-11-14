@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+    main {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .hero img {
+        max-height: 750px;
+    }
+
+    .card {
+        position: absolute;
+        background-color: var(--card-bg);
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        width: 310px;
+        padding: 1.25rem;
+    }
+
+    .card h2 {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        border-radius: 0px 50px 50px 0px;
+        text-align: left;
+        padding: 0.5rem 1rem;
+        margin: -0.5rem 0 1rem -1.75rem;
+        width: 85%;
+    }
+
+    .data {
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    /* hide mobile SVG in desktop view */
+    .weather-icon {
+        display: none;
+    }
+
+    /* add the weather emoticon using pseudo-element */
+    .weather h2::after {
+        content: " ⛅";
+        margin-left: 0.5rem;
+    }
+}
