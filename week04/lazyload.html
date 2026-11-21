@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="WDD131 Week 04 Lazy Loading Images Activity.">
+    <meta name="author" content="Solomon Umoh">
+
+    <title>Lazy Loading Images | WDD131</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="styles/lazyload.css">
+
+    <!-- external javaScript -->
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Lazy Loading Images</h1>
+        <p>WDD131 - Web Frontend Development</p>
+    </header>
+
+    <main>
+
+        <h2>Beautiful Places Around the World</h2>
+
+        <img
+            src="https://picsum.photos/seed/lazyplace1/400/650"
+            alt="Beautiful landscape with natural scenery"
+            width="400"
+            height="650"
+            loading="lazy">
+
+        <img
+            src="https://picsum.photos/seed/lazyplace2/400/650"
+            alt="Scenic view of a beautiful natural environment"
+            width="400"
+            height="650"
+            loading="lazy">
+
+        <img
+            src="https://picsum.photos/seed/lazyplace3/400/650"
+            alt="Beautiful outdoor scenery"
+            width="400"
+            height="650"
+            loading="lazy">
+
+        <img
+            src="https://picsum.photos/seed/lazyplace4/400/650"
+            alt="Peaceful landscape surrounded by nature"
+            width="400"
+            height="650"
+            loading="lazy">
+
+        <img
+            src="https://picsum.photos/seed/lazyplace5/400/650"
+            alt="Amazing natural scenery and landscape"
+            width="400"
+            height="650"
+            loading="lazy">
+
+        <img
+            src="https://picsum.photos/seed/lazyplace6/400/650"
+            alt="Beautiful scenery in an outdoor environment"
+            width="400"
+            height="650"
+            loading="lazy">
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> |
+            Solomon Umoh | Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
