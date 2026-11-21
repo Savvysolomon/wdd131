@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore temples around the world in this responsive Picture Album project for WDD131.">
+    <meta name="author" content="Solomon Umoh">
+
+    <title>Filtered Temple Album | WDD131</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <span class="title">Temple Album</span>
+
+            <button
+                id="menu-btn"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="nav-menu">
+                ☰
+            </button>
+        </div>
+
+        <nav id="nav-menu" aria-label="Main navigation">
+            <a href="#" class="active" data-filter="home" aria-current="page">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="view-title">Home</h1>
+
+        <div class="gallery-grid" id="gallery">
+            <!-- Temple cards are generated dynamically using JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> |
+            Solomon Umoh | Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

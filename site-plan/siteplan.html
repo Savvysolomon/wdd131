@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHC Eats — Best Restaurants &amp; Food Spots in Port Harcourt</title>
+  <link rel="stylesheet" href="styles/siteplan.css" />
+
+  <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo" onclick="navTo('home')">PHC EATS</div>
+    <nav>
+      <button class="nav-btn active" data-page="home" onclick="showPage('home', this)">Home</button>
+      <button class="nav-btn" data-page="directory" onclick="showPage('directory', this)">Browse Spots</button>
+      <button class="nav-btn" data-page="profile" onclick="showPage('profile', this)">Spot Profile &amp; Add Spot</button>
+    </nav>
+  </header>
+
+  <!-- PAGE 1: HOME & DISCOVERY HUB -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <h1>Discover the Best Eats &amp; Spots in Port Harcourt</h1>
+      <p>From authentic Bole &amp; Fish to GRA lounges, waterfront grills, and Rivers native soups.</p>
+      <div class="search-bar">
+        <input type="text" id="homeSearchInput" placeholder="Search bole, fisherman soup, suya, or spot name..." />
+        <select id="homeNeighborhoodSelect">
+          <option value="ALL">All Neighborhoods</option>
+          <option value="New GRA">New GRA</option>
+          <option value="Old GRA">Old GRA</option>
+          <option value="Peter Odili Road">Peter Odili Road</option>
+          <option value="Ada George">Ada George</option>
+          <option value="D-Line">D-Line</option>
+          <option value="Woji">Woji</option>
+        </select>
+        <button class="btn" onclick="executeHomeSearch()">Search Spots</button>
+      </div>
+    </div>
+
+    <h2>Explore by Category</h2>
+    <div class="grid-4">
+      <div class="card cat-card" onclick="filterByCategory('Bole & Fish')">
+        <div class="cat-icon">🔥</div>
+        <strong>Bole &amp; Roasted Fish</strong>
+        <p class="muted-sm">Smoky plantain &amp; croaker</p>
+      </div>
+      <div class="card cat-card" onclick="filterByCategory('Native & Seafood')">
+        <div class="cat-icon">🍲</div>
+        <strong>Native &amp; Seafood</strong>
+        <p class="muted-sm">Fisherman soup &amp; onunu</p>
+      </div>
+      <div class="card cat-card" onclick="filterByCategory('Lounge & Dining')">
+        <div class="cat-icon">🍸</div>
+        <strong>GRA Lounges &amp; Dining</strong>
+        <p class="muted-sm">Cocktails &amp; continental</p>
+      </div>
+      <div class="card cat-card" onclick="filterByCategory('Suya & Grills')">
+        <div class="cat-icon">🍢</div>
+        <strong>Suya, Shawarma &amp; Grills</strong>
+        <p class="muted-sm">Late-night street favorites</p>
+      </div>
+    </div>
+
+    <h2>
+      <span>Trending in Port Harcourt This Week</span>
+      <button class="btn-outline" onclick="navTo('directory')">View All Spots →</button>
+    </h2>
+    <div id="trendingGrid" class="grid-3"></div>
+
+    <h2>Curated Local Guides</h2>
+    <div class="grid-2">
+      <div class="card guide-card" onclick="filterByCategory('Bole & Fish')">
+        <span class="badge">EDITOR'S GUIDE</span>
+        <h3>Top Bole &amp; Roasted Fish Spots in Port Harcourt</h3>
+        <p class="muted-sm">From Tombia Street to D-Line, here is where to get the richest palm-oil pepper sauce.</p>
+      </div>
+      <div class="card guide-card" onclick="filterByCategory('Lounge & Dining')">
+        <span class="badge">NIGHTLIFE &amp; DINING</span>
+        <h3>Best Date Night Restaurants in New GRA &amp; Peter Odili</h3>
+        <p class="muted-sm">Aesthetic spots with great lighting, live music, and curated menus.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="directory" class="page">
+    <div class="dir-header">
+      <div>
+        <h1>Port Harcourt Food Directory</h1>
+        <p id="resultsCount" class="muted-sm">Showing all verified spots</p>
+      </div>
+      <div class="dir-controls">
+        <input type="text" id="dirSearchInput" placeholder="Filter by keyword..." oninput="applyFilters()" />
+        <select id="sortSelect" onchange="applyFilters()">
+          <option value="rating">Sort: Highest Rated</option>
+          <option value="reviews">Most Reviewed</option>
+          <option value="priceAsc">Price: Low to High</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="dir-layout">
+      <aside class="sidebar">
+        <div class="filter-group">
+          <h4>Neighborhood</h4>
+          <label><input type="checkbox" class="nb-filter" value="New GRA" onchange="applyFilters()" /> New GRA</label>
+          <label><input type="checkbox" class="nb-filter" value="Old GRA" onchange="applyFilters()" /> Old GRA</label>
+          <label><input type="checkbox" class="nb-filter" value="Peter Odili Road" onchange="applyFilters()" /> Peter Odili Road</label>
+          <label><input type="checkbox" class="nb-filter" value="Ada George" onchange="applyFilters()" /> Ada George</label>
+          <label><input type="checkbox" class="nb-filter" value="D-Line" onchange="applyFilters()" /> D-Line</label>
+          <label><input type="checkbox" class="nb-filter" value="Woji" onchange="applyFilters()" /> Woji</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label><input type="checkbox" class="cat-filter" value="Bole & Fish" onchange="applyFilters()" /> Bole &amp; Fish</label>
+          <label><input type="checkbox" class="cat-filter" value="Native & Seafood" onchange="applyFilters()" /> Native &amp; Seafood</label>
+          <label><input type="checkbox" class="cat-filter" value="Lounge & Dining" onchange="applyFilters()" /> Lounge &amp; Dining</label>
+          <label><input type="checkbox" class="cat-filter" value="Suya & Grills" onchange="applyFilters()" /> Suya &amp; Grills</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Budget</h4>
+          <label><input type="checkbox" class="price-filter" value="1" onchange="applyFilters()" /> ₦ (Under ₦5,000)</label>
+          <label><input type="checkbox" class="price-filter" value="2" onchange="applyFilters()" /> ₦₦ (₦5,000 – ₦15,000)</label>
+          <label><input type="checkbox" class="price-filter" value="3" onchange="applyFilters()" /> ₦₦₦ (₦15,000+)</label>
+        </div>
+
+        <button class="btn-outline" style="width: 100%;" onclick="resetFilters()">Reset All Filters</button>
+      </aside>
+
+      <div>
+        <div id="directoryGrid" class="grid-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profile" class="page">
+    <div id="spotDetailContainer"></div>
+
+    <!-- BUSINESS SUBMISSION SECTION -->
+    <div class="card business-cta">
+      <h2>Own a Restaurant or Food Spot in Port Harcourt?</h2>
+      <p class="muted-sm" style="margin-bottom: 1.25rem;">Get your business listed in front of thousands of Port Harcourt food lovers every week.</p>
+      
+      <div class="grid-2" style="margin-bottom: 1.25rem;">
+        <div class="card">
+          <h3>Basic Listing — Free</h3>
+          <p class="muted-sm" style="margin-top: 0.5rem;">• Business name, address &amp; opening hours<br/>• Searchable by neighborhood<br/>• Customer reviews &amp; ratings</p>
+        </div>
+        <div class="card" style="border-color: var(--primary);">
+          <span class="badge">MOST POPULAR</span>
+          <h3>Featured Partner — ₦15,000 / mo</h3>
+          <p class="muted-sm" style="margin-top: 0.5rem;">• Homepage "Trending" spotlight<br/>• Direct WhatsApp Order button<br/>• Full menu &amp; photo showcase</p>
+        </div>
+      </div>
+
+      <form id="addSpotForm" onsubmit="submitNewSpot(event)">
+        <strong>Submit Your Spot</strong>
+        <div class="form-grid">
+          <input type="text" id="newSpotName" placeholder="Restaurant / Spot Name" required />
+          <select id="newSpotNeighborhood" required>
+            <option value="New GRA">New GRA</option>
+            <option value="Old GRA">Old GRA</option>
+            <option value="Peter Odili Road">Peter Odili Road</option>
+            <option value="Ada George">Ada George</option>
+            <option value="D-Line">D-Line</option>
+            <option value="Woji">Woji</option>
+          </select>
+          <select id="newSpotCategory" required>
+            <option value="Bole & Fish">Bole &amp; Fish</option>
+            <option value="Native & Seafood">Native &amp; Seafood</option>
+            <option value="Lounge & Dining">Lounge &amp; Dining</option>
+            <option value="Suya & Grills">Suya &amp; Grills</option>
+          </select>
+          <input type="tel" id="newSpotPhone" placeholder="WhatsApp / Phone (e.g. 0803...)" required />
+        </div>
+        <button type="submit" class="btn" style="margin-top: 1rem;">Add Spot to Live Directory</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    PHC EATS • Your Trusted Local Guide to Port Harcourt Food, Nightlife &amp; Hangout Spots
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

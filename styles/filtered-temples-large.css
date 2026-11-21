@@ -1,0 +1,61 @@
+
+/* tablet view */
+
+@media (min-width: 768px) {
+
+    #menu-btn {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .header-container {
+        padding: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav a {
+        padding: 25px 20px;
+        font-size: 1.05rem;
+        border-bottom: none;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background-color: var(--accent-color);
+        color: #000000;
+        border-bottom: 2px solid #000000;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .temple-card {
+        max-width: 100%;
+    }
+}
+
+/* desktop view */
+
+@media (min-width: 1024px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .temple-card {
+        padding: 20px;
+    }
+}
