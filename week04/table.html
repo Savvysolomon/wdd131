@@ -1,33 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Tables</title>
+
+    <meta name="description" content="HTML table activity showing an account feature comparison.">
+    <meta name="author" content="Solomon Umoh">
+
+    <title>Account Feature Comparison  Table | WDD131</title>
+
     <link href="styles/table.css" rel="stylesheet">
 </head>
+
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th colspan="4">ACME Wildwest Services</th>
-            </tr>
-            
-            <tr>
-                <th>
-                    <td class="blank"></td>
-                    <td>Feature 1</td>
-                    <td>Feature 2</td>
-                    <td>Feature 3</td>
-                </th>
-            </tr>
-        </thead>
 
+    <main>
 
+        <table>
 
+            <caption>
+                Table 1: Account Feature Comparison
+            </caption>
 
+            <thead>
 
+                <tr>
+                    <th colspan="4">
+                        ACME Wildwest Services
+                    </th>
+                </tr>
 
-    </table>
+                <tr>
+                    <th scope="col" class="blank"></th>
+                    <th scope="col">Basic</th>
+                    <th scope="col">Premium</th>
+                    <th scope="col">Deluxe</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <th scope="row">Feature 1</th>
+                    <td><span class="check">✔</span></td>
+                    <td><span class="check">✔</span></td>
+                    <td><span class="check">✔</span></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Feature 2</th>
+                    <td><span class="cross">✖</span></td>
+                    <td><span class="check">✔</span></td>
+                    <td><span class="check">✔</span></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Feature 3</th>
+                    <td><span class="cross">✖</span></td>
+                    <td><span class="cross">✖</span></td>
+                    <td><span class="check">✔</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
+
 </body>
 </html>

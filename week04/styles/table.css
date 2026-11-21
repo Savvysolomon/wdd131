@@ -1,14 +1,120 @@
-body {
-    margin: 0 auto;
-    padding: 0;
+/* general styling */
+
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* table styling */
 
 table {
-
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
 }
 
-thead {
-    color: #fff;
-    background-color: #000;
+/* table header */
+
+thead th {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 18px;
+    font-size: 1.3rem;
+}
+
+thead th:first-child {
+    background-color: #000000;
+}
+
+thead tr:first-child th {
+    background-color: #000000;
+    font-size: 1.4rem;
+}
+
+thead tr:nth-child(2) th {
+    background-color: #333333;
+}
+
+.blank{
+    background-color: #000000 !important;
+}
+
+/* table body */
+
+tbody th,
+tbody td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    font-size: 1.1rem;
+}
+
+tbody th {
+    font-weight: bold;
+}
+
+/* zebra striping  */
+
+tbody tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* check and cross symbols */
+
+.check {
+    color: #655b9a;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.cross {
+    color: #ff3366;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+/* table caption */
+
+caption {
+    caption-side: bottom;
+    padding: 8px;
+    font-size: 1rem;
+    color: #333333;
+}
+
+/* responsive design */
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    thead th {
+        padding: 12px 5px;
+        font-size: 1rem;
+    }
+
+    tbody th,
+    tbody td {
+        padding: 8px 4px;
+        font-size: 0.9rem;
+    }
+
+    .check,
+    .cross {
+        font-size: 1.4rem;
+    }
 }
